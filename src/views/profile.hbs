@@ -1,0 +1,44 @@
+<h1>Skate Park</h1>
+
+<div class='py-4'>
+  <h2>Datos del perfil</h2>
+  <hr class='w-50' />
+
+  <form id='update-form'>
+    <div class='form-group row w-50 m-auto'>
+      <div class='form-group col-12 col-sm-6'>
+        <label>Email</label>
+        <input id='email' class='form-control m-auto' disabled value='{{user.email}}' />
+      </div>
+      <div class='form-group col-12 col-sm-6'>
+        <label>Nombre</label>
+        <input id='name' class='form-control m-auto' value='{{user.name}}' />
+      </div>
+      <div class='form-group col-12 col-sm-6'>
+        <label>Password</label>
+        <input id='password' type='password' class='form-control m-auto' />
+      </div>
+      <div class='form-group col-12 col-sm-6'>
+        <label>Repita la password</label>
+        <input id='repeat-password' type='password' class='form-control m-auto' />
+      </div>
+      <div class='form-group col-12 col-sm-6'>
+        <label>Años de experiencia</label>
+        <input id='experience' class='form-control m-auto' value='{{user.experience}}' />
+      </div>
+      <div class='form-group col-12 col-sm-6'>
+        <label>Especialidad</label>
+        <input id='specialty' class='form-control m-auto' value='{{user.specialty}}' />
+      </div>
+    </div>
+    <div class='mb-1'>
+      <button type='submit' class='btn btn-primary'>Actualizar</button>
+    </div>
+    <div>
+      <p id='delete-button' class='btn btn-danger'>Eliminar cuenta</p>
+    </div>
+  </form>
+</div>
+{{! id_user se necesita en update.js, en la ruta para actualizar el usuario }}
+<script defer>const id_user = {{user.id_user}}</script>
+<script defer src='/js/update.js'></script>

@@ -1,0 +1,31 @@
+CREATE SCHEMA skate_park;
+
+USE skate_park;
+
+CREATE TABLE rols(
+  id_rol INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50)
+);
+
+-- crea los roles
+INSERT INTO rols (name) VALUES ('admin'), ('user');
+
+CREATE TABLE users(
+  id_user INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL UNIQUE,
+  password VARCHAR(256) NOT NULL,
+  experience INT UNSIGNED,
+  specialty VARCHAR(50),
+  image_url VARCHAR(256),
+  state BOOLEAN NOT NULL DEFAULT FALSE,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  id_rol INT UNSIGNED NOT NULL,
+  FOREIGN KEY (id_rol) REFERENCES rols(id_rol)
+);
+
+
+
+
+

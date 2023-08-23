@@ -1,0 +1,42 @@
+<h1>Skate Park</h1>
+
+<div class='py-4'>
+  <h2>Registro</h2>
+  <hr class='w-50' />
+
+  <form id='signup-form'>
+    <div class='form-group row w-50 m-auto'>
+      <div class='form-group col-12 col-sm-6'>
+        <label for='email'>Email</label>
+        <input id='email' class='form-control m-auto' />
+      </div>
+      <div class='form-group col-12 col-sm-6'>
+        <label for='name'>Nombre</label>
+        <input id='name' class='form-control m-auto' />
+      </div>
+      <div class='form-group col-12 col-sm-6'>
+        <label for='password'>Password</label>
+        <input id='password' class='form-control m-auto' />
+      </div>
+      <div class='form-group col-12 col-sm-6'>
+        <label for='repeat-password'>Repita la password</label>
+        <input id='repeat-password' class='form-control m-auto' />
+      </div>
+      <div class='form-group col-12 col-sm-6'>
+        <label for='experience'>Años de experiencia</label>
+        <input id='experience' class='form-control m-auto' />
+      </div>
+      <div class='form-group col-12 col-sm-6'>
+        <label for='specialty'>Especialidad</label>
+        <input id='specialty' class='form-control m-auto' />
+      </div>
+      <div class='form-group col-12 col-sm-12'>
+        <label for='file'>Foto de perfil</label>
+        <input id='file' type='file' />
+      </div>
+    </div>
+    <button class='btn btn-info mb-3' type='submit'>Registrarme</button>
+    <p><a href='/auth/login'> Iniciar sesión</a></p>
+  </form>
+</div>
+<script defer src='/js/signup.js'></script>
